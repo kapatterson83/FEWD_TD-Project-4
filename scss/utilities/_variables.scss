@@ -1,0 +1,55 @@
+// ==========================================================================
+// Global Variables
+// ==========================================================================
+
+// Font Stacks
+$font-url--google: "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+
+$font-family--primary   : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$fong-weight--thin      : 100;
+$fong-weight--light     : 300;
+$fong-weight--medium    : 400;
+$fong-weight--bold      : 700;
+$fong-weight--ultra-bold: 900;
+
+$base__font-size: 16px;
+$base__line-height: 24px;
+
+// Colors
+//color determined using https://html-color-codes.info/colors-from-image
+//color names from http://chir.ag/projects/name-that-color
+
+$white                  : #fff;
+$black                  : #0b0b0b;
+$grey                   : #797e83;
+
+$viking                 : #58E1C1;
+$mailbu                 : #51DDFC;
+$emerald                : #63CC82;
+$sunglo                 : #E4757A;
+$coral                  : #FD7856;
+$purple-mountain-majesty: #927BC1;
+
+$riptide                : #80E8D1;
+$shakespeare            : #3FABCA;
+$anakiwa                : #7EE6FD;
+$french-lilac           : #DEB2EE;
+$vista-blue             : #88D9A0;
+$sea-pink               : #EC9FA3;
+$vivid-tangerine        : #FD9F85;
+
+
+// Grid
+
+$g-col-width   : 65px;      //grid-column-width
+$g-gutter-width: 20px;      //grid-gutter-width
+$g-col-count   : 12;        // grid-column-count
+$g-cont-max-w  : 1050px;    //grid-container-max-width
+// variables used in g-context function per _grid.scss
+
+// Breakpoints
+
+$brkpoint-sm: 1px;
+$brkpoint-md: 768px;
+$brkpoint-lg: 1100px;
