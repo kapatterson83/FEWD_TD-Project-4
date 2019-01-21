@@ -7,11 +7,11 @@ $font-url--google: "https://fonts.googleapis.com/css?family=Lato:100,300,400,700
 
 $font-family--primary   : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-$fong-weight--thin      : 100;
-$fong-weight--light     : 300;
-$fong-weight--medium    : 400;
-$fong-weight--bold      : 700;
-$fong-weight--ultra-bold: 900;
+$font-weight--thin      : 100;
+$font-weight--light     : 300;
+$font-weight--medium    : 400;
+$font-weight--bold      : 700;
+$font-weight--ultra-bold: 900;
 
 $base__font-size: 16px;
 $base__line-height: 24px;
@@ -25,7 +25,7 @@ $black                  : #0b0b0b;
 $grey                   : #797e83;
 
 $viking                 : #58E1C1;
-$mailbu                 : #51DDFC;
+$malibu                 : #51DDFC;
 $emerald                : #63CC82;
 $sunglo                 : #E4757A;
 $coral                  : #FD7856;
@@ -38,6 +38,31 @@ $french-lilac           : #DEB2EE;
 $vista-blue             : #88D9A0;
 $sea-pink               : #EC9FA3;
 $vivid-tangerine        : #FD9F85;
+
+$col-numbers: (
+  '12',
+  '6',
+  '4',
+  '3',
+  '5',
+  '7',
+  '8',
+);
+
+$color-map: (
+  'default' : $malibu,
+  'success' : $emerald,
+  'error'   : $sunglo,
+  'warning' : $coral,
+  'info'    : $purple-mountain-majesty,
+  '12'      : $riptide,
+  '6'       : $shakespeare,
+  '4'       : $anakiwa,
+  '3'       : $french-lilac,
+  '5'       : $vista-blue,
+  '7'       : $sea-pink,
+  '8'       : $vivid-tangerine,
+);
 
 
 // Grid

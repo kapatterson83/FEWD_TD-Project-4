@@ -2,6 +2,30 @@
 // Mixins
 // ==========================================================================
 
+// Headline styles
+
+@mixin hl-style($hl-color, $hl-weight, $hl-pad-left) {
+  color: $hl-color;
+  font-weight: $hl-weight;
+  padding-left: $hl-pad-left;
+  @content;
+}
+
+// Link styles
+@mixin link-style(
+  $link-display,
+  $link-margin,
+  $link-weight,
+  $link-color,
+  $link-pad) {
+  text-decoration: none;
+  display: $link-display;
+  margin: $link-margin;
+  font-weight: $link-weight;
+  color: $link-color;
+  padding: $link-pad;
+}
+
 // Adjacent sibling margins
 
 @mixin doubly($margin: 1em) {
