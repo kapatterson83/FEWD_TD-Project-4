@@ -1,69 +1,85 @@
-
-.container {
-  width: 85%;
-  @extend .centered;
-}
-
-// Set the "context" width for the grid
-@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
-  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
-  @return $g-context;
-  // (column width * 12 columns) + (gutter width * 11 columns) =
-  // (65px * 12) + (20px * 11) =
-  // 1000px
-}
+// ==========================================================================
+// Grid
+// ==========================================================================
 
 
-// Calculate grid columns
-@media (min-width: 769px) {
-  @for $i from 1 through $g-col-count {
-
-    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
-    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-
-    // Generate column modifier classes
-    .grid__col--#{$i} {
-      width: percentage($target / $context);
+@each $col-number in $col-numbers {
+  [class*="grid__col--#{$col-number} theme__colors"] {
+    background-color: map-get($color-map, #{$col-number});
+    color: $grey;
+    font-weight: $font-weight--bold;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    &:nth-child(1) {
+      margin-top: 2.75em;
     }
   }
 }
 
-// Column styles
-[class^="grid__col--"] {
-
-  @media (min-width: 1px) and (max-width: 768px) {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  @media (min-width: 769px) {
-    @include doubly(percentage($g-gutter-width / $context));
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    &:last-of-type {
-      float: right;
-    }
-  }
-}
-
-// ==========================================================================
-// Grid Container
-// ==========================================================================
-
-.grid-row {
-  @extend %clearfix;
-  @extend .centered;
-  width: 90%;
-
-  // Make nested grid 100%
-  [class*="grid__col--"] > & {
-    width: 100%;
-  }
-
-  // Set a max-width for grid container
-  @media (min-width: 1100px) {
-    max-width: $g-cont-max-w;
-  }
-}
+// COMPLICATED GRID SYSTEM STARTS HERE
+//
+//
+// // Set the "context" width for the grid
+// @function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+//   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+//   @return $g-context;
+//   // (column width * 12 columns) + (gutter width * 11 columns) =
+//   // (65px * 12) + (20px * 11) =
+//   // 1000px
+// }
+//
+//
+// // Calculate grid columns
+// @media (min-width: 769px) {
+//   @for $i from 1 through $g-col-count {
+//
+//     $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+//     $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+//
+//     // Generate column modifier classes
+//     .grid__col--#{$i} {
+//       width: percentage($target / $context);
+//     }
+//   }
+// }
+//
+// // Column styles
+// [class^="grid__col--"] {
+//
+//   @media (min-width: 1px) and (max-width: 768px) {
+//     margin-top: 12px;
+//     margin-bottom: 12px;
+//   }
+//
+//   @media (min-width: 769px) {
+//     @include doubly(percentage($g-gutter-width / $context));
+//     float: left;
+//     min-height: 1px;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     &:last-of-type {
+//       float: right;
+//     }
+//   }
+// }
+//
+// // ==========================================================================
+// // Grid Container
+// // ==========================================================================
+//
+// .grid-row {
+//   @extend %clearfix;
+//   @extend .centered;
+//   width: 90%;
+//
+//   // Make nested grid 100%
+//   [class*="grid__col--"] > & {
+//     width: 100%;
+//   }
+//
+//   // Set a max-width for grid container
+//   @media (min-width: 1100px) {
+//     max-width: $g-cont-max-w;
+//   }
+// }

@@ -1,0 +1,26 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+  &--default {
+    @extend %btn;
+    background-color: map-get($color-map, 'default');
+  }
+  &--success {
+    @extend %btn;
+    background-color: map-get($color-map, 'success');
+  }
+  &--error {
+    @extend %btn;
+    background-color: map-get($color-map, 'error');
+  }
+  &--warning {
+    @extend %btn;
+    background-color: map-get($color-map, 'warning');
+  }
+  &--info {
+    @extend %btn;
+    background-color: map-get($color-map, 'info');
+  }
+}

@@ -1,3 +1,8 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+
 // Import if Google Fonts URL is defined
 
 @if variable-exists(font-url--google) {
@@ -6,4 +11,27 @@
 
 .container {
   font-family: $font-family--primary;
+}
+
+.headline {
+  &--secondary {
+    @include hl-style($grey, $font-weight--medium, 0.5em);
+    margin-top: 4em;
+  }
+  &--primary {
+    @include hl-style($viking, $font-weight--ultra-bold, 0.75em) {
+      letter-spacing: -1px;
+    }
+  }
+}
+
+.blockquote {
+  border-left: solid 9px $viking;
+  border-radius: 5px;
+  padding: 0 1em;
+  color: $grey;
+  font-style: italic;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  margin: 1em 1.6em 0 2em;
 }

@@ -6,15 +6,48 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-}
-
-p {
-}
-
 .container {
-  text-align: center;
   width: 90%;
   margin: 0 auto;
+}
+
+.link {
+  @include link-style(
+              block,
+              1.5em 0,
+              $font-weight--bold,
+              $malibu,
+              null);
+  text-align: center;
+  p > & {
+  display: inline;
+  margin: 0;
+  }
+}
+
+.card {
+  margin: 5em 0;
+  > p {
+    color: $grey;
+    line-height: 1.5em;
+    letter-spacing: -0.05px;
+  }
+}
+
+[class*="hidden"] {
+  display: none;
+}
+
+@each $col-number in $col-numbers {
+  [class*="grid__col--#{$col-number} theme__colors"] {
+    background-color: map-get($color-map, #{$col-number});
+    color: $grey;
+    font-weight: $font-weight--bold;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    &:nth-child(1) {
+      margin-top: 2.75em;
+    }
+  }
 }
