@@ -70,11 +70,10 @@ $color-map: (
 $g-col-width   : 65px;      //grid-column-width
 $g-gutter-width: 20px;      //grid-gutter-width
 $g-col-count   : 12;        // grid-column-count
-$g-cont-max-w  : 1050px;    //grid-container-max-width
+$g-cont-max-w  : 1190px;    //grid-container-max-width
 // variables used in g-context function per _grid.scss
 
 // Breakpoints
 
 $brkpoint-sm: 1px;
-$brkpoint-md: 768px;
-$brkpoint-lg: 1100px;
+$brkpoint-md: 480px;

@@ -2,30 +2,6 @@
 // Mixins
 // ==========================================================================
 
-// Headline styles
-
-@mixin hl-style($hl-color, $hl-weight, $hl-pad-left) {
-  color: $hl-color;
-  font-weight: $hl-weight;
-  padding-left: $hl-pad-left;
-  @content;
-}
-
-// Link styles
-@mixin link-style(
-  $link-display,
-  $link-margin,
-  $link-weight,
-  $link-color,
-  $link-pad) {
-  text-decoration: none;
-  display: $link-display;
-  margin: $link-margin;
-  font-weight: $link-weight;
-  color: $link-color;
-  padding: $link-pad;
-}
-
 // Adjacent sibling margins
 
 @mixin doubly($margin: 1em) {
@@ -37,4 +13,33 @@
 
 // Media queries
 
+@mixin mquery($break) {
+  @if $break == "small" {
+    @media (min-width: $brkpoint-sm) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else {
+    @error "Uh-oh! No value could be retrieved for '#{$break}'."
+  }
+}
+
 // Flexbox settings
+
+@mixin flexy(
+  $disp,
+  $dir,
+  $wrap,
+  $justify,
+  $alignitems) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $alignitems;
+}

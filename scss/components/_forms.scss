@@ -5,6 +5,11 @@
 .form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.form__label--hidden {
+  display: none;
 }
 
 .form__input {
