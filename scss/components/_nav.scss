@@ -3,9 +3,9 @@
 // ==========================================================================
 
 .nav {
+  margin-top: .5em;
   @include mquery(medium) {
-      display: flex;
-      justify-content: center;
+    @include flexy(flex, null, null, center, center);
   }
 }
 

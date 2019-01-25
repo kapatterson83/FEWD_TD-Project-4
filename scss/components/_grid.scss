@@ -5,12 +5,12 @@
 // Grid
 
 .grid__row {
+  margin: 2em 0 3em 0;
+
   @include mquery(small) {
-    display: flex;
-    flex-flow: column wrap;
+    @include flexy(flex, column, wrap, null, null);
     & > div {
-      display: flex;
-      flex-flow: column wrap;
+      @include flexy(flex, column, wrap, null, null);
       }
   }
   @include mquery(medium) {
@@ -31,11 +31,8 @@
     padding: 1em;
     border-radius: 10px;
     margin: 0.25em 0;
-    &:nth-child(1) {
-      margin-top: 2.75em;
-    }
     @include mquery(medium) {
-      margin-top: 2.75em;
+      margin-top: 0.75em;
     }
   }
 }
@@ -84,7 +81,7 @@
   }
 
   // Set a max-width for grid container
-  @media (min-width: 1190px) {
+  @include mquery(medium) {
     max-width: $g-cont-max-w;
   }
 }

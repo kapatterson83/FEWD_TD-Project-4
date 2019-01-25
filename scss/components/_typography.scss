@@ -16,6 +16,10 @@
   margin: 0 auto;
 }
 
+.card {
+  margin-bottom: 3em;
+}
+
 .headline {
   &--secondary {
     @extend %hl-secondary;

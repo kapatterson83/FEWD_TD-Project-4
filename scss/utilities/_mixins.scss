@@ -11,6 +11,22 @@
   }
 }
 
+
+// Flexbox settings
+
+@mixin flexy(
+  $disp,
+  $dir,
+  $wrap,
+  $justify,
+  $alignitems) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $alignitems;
+}
+
 // Media queries
 
 @mixin mquery($break) {
@@ -27,19 +43,4 @@
   @else {
     @error "Uh-oh! No value could be retrieved for '#{$break}'."
   }
-}
-
-// Flexbox settings
-
-@mixin flexy(
-  $disp,
-  $dir,
-  $wrap,
-  $justify,
-  $alignitems) {
-    display: $disp;
-    flex-direction: $dir;
-    flex-wrap: $wrap;
-    justify-content: $justify;
-    align-items: $alignitems;
 }
