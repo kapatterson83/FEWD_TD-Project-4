@@ -39,29 +39,22 @@ $vista-blue             : #88D9A0;
 $sea-pink               : #EC9FA3;
 $vivid-tangerine        : #FD9F85;
 
-$col-numbers: (
-  '12',
-  '6',
-  '4',
-  '3',
-  '5',
-  '7',
-  '8',
-);
-
-$color-map: (
+$color-map-btn: (
   'default' : $malibu,
   'success' : $emerald,
   'error'   : $sunglo,
   'warning' : $coral,
   'info'    : $purple-mountain-majesty,
-  '12'      : $riptide,
-  '6'       : $shakespeare,
-  '4'       : $anakiwa,
-  '3'       : $french-lilac,
-  '5'       : $vista-blue,
-  '7'       : $sea-pink,
-  '8'       : $vivid-tangerine,
+);
+
+$color-map-grid: (
+    '12'      : $riptide,
+    '6'       : $shakespeare,
+    '4'       : $anakiwa,
+    '3'       : $french-lilac,
+    '5'       : $vista-blue,
+    '7'       : $sea-pink,
+    '8'       : $vivid-tangerine,
 );
 
 
@@ -76,4 +69,4 @@ $g-cont-max-w  : 1190px;    //grid-container-max-width
 // Breakpoints
 
 $brkpoint-sm: 1px;
-$brkpoint-md: 480px;
+$brkpoint-md: 890px;
